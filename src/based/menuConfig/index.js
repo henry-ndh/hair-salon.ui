@@ -8,23 +8,22 @@ const MenuHeader = [
    },
    {
       id: 2,
-      link: '/speaking',
+      link: '/service',
       name: 'Services',
    },
    {
       id: 3,
-      link: '/listen',
+      link: '/stylist',
       name: 'Stylists',
    },
    {
       id: 4,
-      link: '/word',
+      link: '/voucher',
       name: 'Voucher',
    },
-
    {
       id: 5,
-      link: '/practice',
+      link: '/contact',
       name: 'Contact',
    },
 ];

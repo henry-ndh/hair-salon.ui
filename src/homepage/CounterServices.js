@@ -16,7 +16,7 @@ export default function CounterServices() {
                <div key={index} className="flex flex-col gap-4 items-center ">
                   <p className="text-2xl font-semibold">{item.title}</p>
                   <div className="flex items-center gap-2">
-                     <item.icon className="stroke-blue size-8" />
+                     <item.icon className="stroke-red size-8" />
                      <CountUp className="font-bold text-2xl" end={item.count} /> <span className="font-bold">+</span>
                   </div>
                </div>

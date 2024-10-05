@@ -27,11 +27,16 @@ module.exports = {
              */
             color1: '#06283D',
             color2: '#1363DF',
-            black: '#000',
-            blue: '#1E90FF',
             color3: '#47B5FF',
             color4: '#DFF6FF',
 
+            black: '#000',
+            blue: '#007bff',
+            red: '#dc3545',
+            red2: '#fff1f4',
+            pink: '#e83e8c',
+            orange: '#fd7e14',
+            yellow: '#ffc107',
             /** color type of word
              * @summary noun (danh từ), verb (động từ), adj (tính từ), adverb(trạng  từ), pronoun(đại từ)
              * @link https://www.englishclub.com/grammar/parts-of-speech_1.htm

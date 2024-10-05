@@ -33,7 +33,7 @@ export default function Location() {
             <div className="grid grid-cols-2 gap-[50px] gap-x-[300px] ">
                {listLocation.map((item, index) => (
                   <div key={index} className="flex gap-4 items-center  ">
-                     <MapPin className="size-6 stroke-blue" />
+                     <MapPin className="size-6 stroke-red" />
                      <div>
                         <h2 className="text-center font-bold text-lg">{item.name}</h2>
                         <p>{item.address}</p>
@@ -50,7 +50,7 @@ export default function Location() {
                   <Input placeholder="Name" />
                   <Input placeholder="Phone" />
                   <Input placeholder="Description" />
-                  <Button className="w-full bg-blue">Submit</Button>
+                  <Button className="w-full bg-red hover:bg-red">Submit</Button>
                </div>
             </div>
          </div>

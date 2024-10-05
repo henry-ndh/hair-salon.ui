@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Common from '../based/Common';
 import { useEffect } from 'react';
 import { Toaster } from '../components/ui/toaster';
+import Footer from '../based/Footer';
 export default function DefaultLayout({ children }) {
    useEffect(() => {
       if (!Common.CheckToken()) {
@@ -11,13 +12,14 @@ export default function DefaultLayout({ children }) {
    }, []);
 
    return (
-      <>
+      <div className=" overflow-x-hidden">
          <Header />
          <Child className="child">
             {children}
             <Toaster />
          </Child>
-      </>
+         <Footer />
+      </div>
    );
 }
 

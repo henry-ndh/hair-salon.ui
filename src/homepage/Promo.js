@@ -1,4 +1,3 @@
-// import { Icons } from '@/components/ui/icons';
 import styled from 'styled-components';
 
 const listPromo = [
@@ -18,7 +17,7 @@ const listPromo = [
 
 const Promo = () => {
    return (
-      <PromoWrapper className=" shadow-lg promo-wrapper flex bg-[#9fcfff]">
+      <PromoWrapper className=" shadow-lg promo-wrapper flex bg-[#fff1f4]">
          <div className="promo-content">
             <ul className="promo-list flex space-x-10">
                {listPromo.map((item, index) => {
