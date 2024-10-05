@@ -28,6 +28,7 @@ module.exports = {
             color1: '#06283D',
             color2: '#1363DF',
             black: '#000',
+            blue: '#1E90FF',
             color3: '#47B5FF',
             color4: '#DFF6FF',
 

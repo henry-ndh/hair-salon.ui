@@ -31,8 +31,12 @@ export default function Header() {
       return (
          <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
             {MenuHeader.map((item) => (
-               <Link to={item.link} className="flex items-center gap-4  hover:text-foreground">
+               <Link
+                  to={item.link}
+                  className="group relative flex items-center gap-4 text-black transition-colors duration-300 ease-in-out hover:text-blue"
+               >
                   {item.name}
+                  <span className="absolute bottom-[-5px] left-1/2 h-[2px] w-0 bg-[#1E90FF] transition-all duration-300 ease-in-out group-hover:left-0 group-hover:w-full"></span>
                </Link>
             ))}
          </nav>
