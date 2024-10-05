@@ -1,37 +1,32 @@
-import { HeaderIcon } from "../icon/configIcon";
+import { HeaderIcon } from '../icon/configIcon';
 
 const MenuHeader = [
-  {
-    id: 1,
-    link: "/",
-    name: "Trang chủ",
-    icon: <HeaderIcon.Home />,
-  },
-  {
-    id: 2,
-    link: "/speaking",
-    name: "Nói",
-    icon: <HeaderIcon.Speaking />,
-  },
-  // {
-  //   id: 4,
-  //   link: "/listen",
-  //   name: "Nghe",
-  //   icon: <HeaderIcon.Listen />,
-  // },
-  {
-    id: 3,
-    link: "/word",
-    name: "Từ vựng",
-    icon: <HeaderIcon.Word />,
-  },
+   {
+      id: 1,
+      link: '/',
+      name: 'Home',
+   },
+   {
+      id: 2,
+      link: '/speaking',
+      name: 'Services',
+   },
+   {
+      id: 3,
+      link: '/listen',
+      name: 'Stylists',
+   },
+   {
+      id: 4,
+      link: '/word',
+      name: 'Voucher',
+   },
 
-  {
-    id: 4,
-    link: "/practice",
-    name: "Ôn tập",
-    icon: <HeaderIcon.Practice />,
-  },
+   {
+      id: 5,
+      link: '/practice',
+      name: 'Contact',
+   },
 ];
 
 export { MenuHeader };

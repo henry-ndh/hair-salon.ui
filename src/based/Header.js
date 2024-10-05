@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import { MenuHeader } from './menuConfig';
 import { HeaderIcon } from './icon/configIcon';
 import { Color } from './color';
+import LogoPNG from '../assets/logo.png';
+import { Clock8 } from 'lucide-react';
+import { Headset } from 'lucide-react';
+import { Mail } from 'lucide-react';
 export default function Header() {
    const [isLoggedIn, setIsLoggedIn] = useState(false);
    const [name, setName] = useState('');
@@ -26,63 +30,47 @@ export default function Header() {
    const fullScreenHeader = () => {
       return (
          <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-            {/* {MenuHeader.map((item) => (
-               <Link to={item.link} className="flex items-center gap-4 text-muted-foreground hover:text-foreground">
-                  {item.icon}
+            {MenuHeader.map((item) => (
+               <Link to={item.link} className="flex items-center gap-4  hover:text-foreground">
                   {item.name}
                </Link>
-            ))} */}
+            ))}
          </nav>
-      );
-   };
-
-   const ScreenMobile = () => {
-      return (
-         <Sheet>
-            <SheetTrigger asChild>
-               <Button variant="outline" size="icon" className="sm:hidden">
-                  {/* <MenuIcon className="h-6 w-6" /> */}
-                  <HeaderIcon.Menu />
-                  <span className="sr-only">Toggle navigation menu</span>
-               </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px]">
-               <div className="flex flex-col gap-6 p-6">
-                  <Link to="/" className="flex items-center gap-2 font-bold">
-                     <HeaderIcon.Logo fill={Color.color3} />
-                     <span className="text-lg">Acme Inc</span>
-                  </Link>
-                  <nav className="grid gap-4">
-                     {MenuHeader.map((item) => (
-                        <Link
-                           to={item.link}
-                           className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
-                        >
-                           {item.icon}
-                           {item.name}
-                        </Link>
-                     ))}
-                  </nav>
-                  <div className="flex flex-col gap-2">
-                     <Button variant="outline">Đăng ký</Button>
-                     <Button>Đăng nhập</Button>
-                  </div>
-               </div>
-            </SheetContent>
-         </Sheet>
       );
    };
 
    return (
       <header
          style={{ zIndex: '999', height: '88px' }}
-         className=" w-full z-9999 fixed flex  items-center justify-between bg-background px-4 py-3 shadow-sm sm:px-6 md:py-4"
+         className=" w-full z-9999 fixed flex  items-center justify-between bg-background px-4 py-3 shadow-lg  sm:px-6 md:py-4"
       >
          <Link href="#" className="flex items-center gap-2 font-bold">
-            <HeaderIcon.Logo fill={Color.color3} />
-            <span className="text-lg sm:text-xl">Hair-salon</span>
+            <img src={LogoPNG} alt="logo" className="object-contain w-20 h-20" />
          </Link>
          {fullScreenHeader()}
+         <div className="flex gap-10">
+            <div className="flex items-center gap-2">
+               <Clock8 className="size-6" />
+               <div className="flex justify-center flex-col items-center">
+                  <p className="text-sm font-medium">Opening Hour</p>
+                  <p className="text-[13px]">Mon - Fri: 9:00 - 18:00</p>
+               </div>
+            </div>
+            <div className="flex items-center gap-2">
+               <Headset className="size-6" />
+               <div className="flex justify-center flex-col items-center">
+                  <p className="text-sm font-medium">Call Us</p>
+                  <p className="text-[13px]">+1 234 567 890</p>
+               </div>
+            </div>
+            <div className="flex items-center gap-2">
+               <Mail className="size-6" />
+               <div className="flex justify-center flex-col items-center">
+                  <p className="text-sm font-medium">Mail Us</p>
+                  <p className="text-[13px]">abc@gmail.com</p>
+               </div>
+            </div>
+         </div>
          <div className="flex items-center gap-4">
             <Button variant="outline" className="hidden sm:inline-flex">
                Đăng ký
@@ -90,7 +78,6 @@ export default function Header() {
             <Button style={{ backgroundColor: '#1363DF' }} className="hidden sm:inline-flex">
                Đăng nhập
             </Button>
-            {ScreenMobile()}
          </div>
       </header>
    );
