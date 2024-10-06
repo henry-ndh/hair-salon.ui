@@ -111,7 +111,10 @@ export default function StylistProfile() {
                         </div>
                      </div>
                      <div className="flex flex-col items-end">
-                        <Badge className="bg-red2 py-2 text-lg font-bold text-black border border-red">
+                        <Badge
+                           variant="default"
+                           className="bg-red2 py-2 text-lg font-bold text-black border border-red hover:bg-red2"
+                        >
                            Chuyên viên kinh nghiệm
                         </Badge>
                      </div>
